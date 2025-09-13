@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>💰 Crypto Trading Bot</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <div class="user-info">
+                <img src="https://via.placeholder.com/40" alt="Avatar" class="avatar">
+                <div class="user-details">
+                    <span class="username">@username</span>
+                    <span class="balance">$1,250.75</span>
+                </div>
+            </div>
+            <button class="menu-btn">☰</button>
+        </header>
+
+        <!-- Navigation -->
+        <nav class="tabs">
+            <button class="tab active" data-tab="dashboard">📊 Дашборд</button>
+            <button class="tab" data-tab="trade">💼 Торговля</button>
+            <button class="tab" data-tab="portfolio">📈 Портфель</button>
+            <button class="tab" data-tab="analytics">📋 Аналитика</button>
+        </nav>
+
+        <!-- Main Content -->
+        <main class="content">
+            <!-- Dashboard Tab -->
+            <div id="dashboard" class="tab-content active">
+                <div class="card">
+                    <h3>💰 Общий баланс</h3>
+                    <div class="balance-amount">$5,247.89</div>
+                    <div class="balance-change">+2.3% за день</div>
+                </div>
+
+                <div class="card-grid">
+                    <div class="card small">
+                        <h4>📈 Активы</h4>
+                        <div class="value">$3,842.15</div>
+                    </div>
+                    <div class="card small">
+                        <h4>💵 Деньги</h4>
+                        <div class="value">$1,405.74</div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <h3>📊 Последние сделки</h3>
+                    <div class="trade-list">
+                        <div class="trade-item buy">
+                            <span>BUY BTC</span>
+                            <span>+0.005 BTC</span>
+                            <span>$325.00</span>
+                        </div>
+                        <div class="trade-item sell">
+                            <span>SELL ETH</span>
+                            <span>-2.1 ETH</span>
+                            <span>$4,210.00</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Trade Tab -->
+            <div id="trade" class="tab-content">
+                <div class="card">
+                    <h3>💼 Торговая пара</h3>
+                    <select class="select">
+                        <option>BTC/USDT</option>
+                        <option>ETH/USDT</option>
+                        <option>BNB/USDT</option>
+                    </select>
+                </div>
+
+                <div class="card">
+                    <h3>🎯 Тип ордера</h3>
+                    <div class="button-group">
+                        <button class="btn active">Market</button>
+                        <button class="btn">Limit</button>
+                        <button class="btn">Stop</button>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <h3>📊 Покупка/Продажа</h3>
+                    <div class="trade-form">
+                        <input type="number" placeholder="Количество" class="input">
+                        <div class="form-actions">
+                            <button class="btn buy-btn">BUY</button>
+                            <button class="btn sell-btn">SELL</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Portfolio Tab -->
+            <div id="portfolio" class="tab-content">
+                <div class="card">
+                    <h3>📋 Ваш портфель</h3>
+                    <div class="asset-list">
+                        <div class="asset-item">
+                            <span>BTC</span>
+                            <span>0.1254</span>
+                            <span>$8,245.67</span>
+                        </div>
+                        <div class="asset-item">
+                            <span>ETH</span>
+                            <span>5.21</span>
+                            <span>$18,542.10</span>
+                        </div>
+                        <div class="asset-item">
+                            <span>USDT</span>
+                            <span>1,245.75</span>
+                            <span>$1,245.75</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
